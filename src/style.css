@@ -58,6 +58,16 @@ ul> img {
     }
 }
 
+
+@media (max-width: 16em) {
+    header > ul {
+        justify-content: space-between;
+    }
+    header > ul > img {
+        display: none;
+    }
+}
+
 #intro > h1 {
     font-size: 1.2em;
     font-weight: 100;
