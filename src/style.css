@@ -182,10 +182,6 @@ ul> img {
     text-align: center;
   }
   
-  
-  
-  
-
   .vegan::after {
     content: "v";
     display: inline-flex; 
@@ -203,11 +199,12 @@ ul> img {
 }
 
   
-  .working-hours-container > h1 {
+  #hours > h1 {
     text-align: center;
     color: black; 
     font-weight: 900;
     font-size: 1.3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .working-hours {
@@ -215,15 +212,19 @@ ul> img {
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid black; 
+    flex-wrap: wrap;
+    font-family: monospace;
   }
   
   .day {
-    flex: 1;
-    font-size: 1.5em;
+    font-size: 1.3em;
+    font-weight: 600;
+    width: 7em;
+    margin-bottom: 3px;
+    text-align: left;
   }
   
   .hours {
-    flex: 1;
+    font-size: 1.3em;
     text-align: right;
-    font-size: 1.5em;
   }
