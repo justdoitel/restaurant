@@ -1,8 +1,32 @@
 import {content} from './load.js' 
 
+function makeSchedule (whatday,whattime){
+    const row = document.createElement('div');
+    row.classList.add("working-hours")
+    const day = document.createElement('div');
+    day.classList.add("day")
+    day.innerText = whatday
+    const time = document.createElement('div')
+    time.classList.add('hours')
+    time.innerText = whattime
+    row.append(day)
+    row.append(time)
+    return row;
+}
+
 export default function loadHour() {
 const hours = document.createElement('div');
 hours.id = "hours"
-hours.innerHTML='<h1>Restaurant Working Hours</h1><div class="working-hours"><div class="day">Monday</div><div class="hours">11:00 AM - 10:00 PM</div></div><div class="working-hours"><div class="day">Tuesday</div><div class="hours">11:00 AM - 10:00 PM</div></div><div class="working-hours"><div class="day">Wednesday</div><div class="hours">11:00 AM - 10:00 PM</div></div><div class="working-hours"><div class="day">Thursday</div><div class="hours">11:00 AM - 10:00 PM</div></div><div class="working-hours"><div class="day">Friday</div><div class="hours">11:00 AM - 11:00 PM</div></div><div class="working-hours"><div class="day">Saturday</div><div class="hours">12:00 PM - 11:00 PM</div></div><div class="working-hours"><div class="day">Sunday</div><div class="hours">12:00 PM - 10:00 PM</div></div></div>';
+const title = document.createElement('h1');
+title.innerText = "Restaurant Working Hours"
+hours.append(title)
+hours.append(makeSchedule("Monday", "11:00 AM - 10:00 PM"))
+hours.append(makeSchedule("Tuesday", "11:00 AM - 10:00 PM"))
+hours.append(makeSchedule("Wednesday", "11:00 AM - 10:00 PM"))
+hours.append(makeSchedule("Thursday", "11:00 AM - 10:00 PM"))
+hours.append(makeSchedule("Friday", "11:00 AM - 10:00 PM"))
+hours.append(makeSchedule("Saturday", "12:00 PM - 11:00 PM"))
+hours.append(makeSchedule("Sunday", "12:00 PM - 10:00 PM"))
+
 content.append(hours);
 }
